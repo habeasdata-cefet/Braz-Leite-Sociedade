@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Braz e Leite</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="img/icons/icone-logo.png" type="image/png"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<section class="cabecalho-e-banner">
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/logo.jpg">
+                </a>
+            </div>
+
+            <div class="menu">
+                <div class="menu-desktop">
+                    <ul>
+                        <li><img src="img/icons/home.png"><a href="index.html">Página inicial</a></li>
+                        <li><img src="img/icons/contato.png"><a href="empresa.html">Sobre a empresa</a></li>
+                        <li><img src="img/icons/servicos.png"><a href="nossos_servicos.html">Nossos serviços</a></li>
+                        <li><img src="img/icons/sobre.png"><a href="quem_somos.html">Quem Somos</a></li>
+                        <li><img src="img/icons/clientes.png"><a href="clientes.html">Clientes</a></li>
+                        <li><img src="img/icons/telefone.png"><a href="contato.html">Entre em contato</a></li>
+                        <li class="botao-webmail"><a href="http://webmail.migadu.com/" target="_blank">Acessar Webmail</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="menu-mobile">
+              
+                <div id="mySidenav" class="sidenav">
+                    <div class="fechar" onclick="closeNav()"><a>X</a></div>
+                    <a href="index.html">Página inicial</a>
+                    <a href="empresa.html">Sobre a empresa</a>
+                    <a href="nossos_servicos.html">Nossos serviços</a>
+                    <a href="quem_somos.html">Quem Somos</a>
+                    <a href="clientes.html">Clientes</a>
+                    <a href="contato.html">Contato</a>
+                    <a href="http://webmail.migadu.com/" target="_blank">Webmail</a>
+                </div>
+
+                <span onclick="openNav()"><img src="img/icons/menu.png"></span>
+            </div>
+        </nav>
+    </header>
+
+    <div class="banner-outras-paginas" style="background: url('img/banner.jpg') no-repeat center;">     
+        <div class="bloco-banner-outras-paginas">
+            <h1>Contato</h1>
+        </div>
+    </div>
+
+    <span id="closebtn" onclick="closeNav()"></span>
+
+    <section class="faixa">
+        <div class="bloco-faixa">
+            <div class="dentro-faixa">
+                <img src="img/icons/faixa-1.webp" style="width: 50px;">
+                <p>Atendimento presencial e online.</p>
+            </div>
+
+            <div class="dentro-faixa">
+                <img src="img/icons/faixa-2.webp" style="width: 50px;">
+                <p>Suporte de 2ª a 6ª feira, das 08:00 às 18:00 horas.</p>
+            </div>
+
+            <div class="dentro-faixa">
+                <img src="img/icons/faixa-3.png" style="width: 50px;">
+                <p>Missionários dos serviços públicos.</p>
+            </div>
+        </div>
+    </section>
+</section>
+
+<section class="dados-formulario-contato">
+    <div class="dados-contato">
+
+        <div class="informacao-esquerda">
+            <div class="mapa">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3750.753726067131!2d-43.95036268563364!3d-19.934780243604703!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa697635e155bd7%3A0xe22e2162c482e1f1!2sAv.+Oleg%C3%A1rio+Maciel%2C+2345+-+Santo+Agostinho%2C+Belo+Horizonte+-+MG%2C+30180-112!5e0!3m2!1spt-BR!2sbr!4v1551387807547" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+
+            <div class="individual-contato">
+                <h3>Mais informações</h3>
+                <p>Av. Olegário Maciel, 2345, salas 301 e 302, Bairro Santo Agostinho, Belo Horizonte - MG, CEP 30.180-112.</p>
+            </div>
+        </div>
+
+
+        <div class="formulario-bloco">
+            <h3>Envie uma mensagem</h3>
+            <form action="enviar.php" required method="post" name="form">
+                <input type="text" id="nome" name="nome" required placeholder="Coloque seu nome">
+                <input type="email" id="email" name="email"  required placeholder="Coloque seu email">
+                <input type="text" id="assunto" name="assunto" required placeholder="Coloque o assunto">
+                <select id="consultor" name="consultor" >
+                    <option value="">Escolha um consultor para enviar o email</option>
+                    <option value="geraldo@amadeusconsultoria.com.br">Geraldo</option>
+                    <option value="sebastiana@amadeusconsultoria.com.br">Sebastiana</option>
+                    <option value="nilton@amadeusconsultoria.com.br">Nilton</option>
+                    <option value="manoel@amadeusconsultoria.com.br">Manoel</option>
+                    <option value="angelo@amadeusconsultoria.com.br">Angelo</option>
+                </select>
+                <textarea type="textarea" id="mensagem" name="mensagem" required placeholder="Mande uma mensagem e vamos conversar"></textarea>
+                <div class="enviar">
+                    <button id="enviar-mensagem" type="submit">Enviar mensagem</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</section>
+
+<section class="informacao-faixa">
+    <div class="bloco-informacao">
+        <p>Disponibilizar aos seus clientes informações atualizadas, suporte técnico e as mais modernas tecnologias.</p>
+        <a href="servicos.html">Saiba mais</a>
+    </div>
+</section>
+
+<footer>
+    <div class="bloco-rodape">    
+        <div class="logo-rodape">
+            <img src="img/logo.jpg">
+        </div>
+
+        <div class="superior-rodape">
+            <h4>Para alcançar a eficiência em seus projetos, a empresa desenvolve um constante trabalho de estudo e pesquisa, buscando disponibilizar aos seus clientes, informações atualizadas, suporte técnico e as mais modernas técnicas de administração.</h4>
+        </div>
+
+        <div class="endereco-rodape">
+            <h5>Endereço</h5>
+            <p>Av. Olegário Maciel, 2345, salas 301 e 302, Bairro Santo Agostinho, Belo Horizonte-MG, CEP 30.180-112 - CNPJ: 02.786.239/0001-64</p>
+            <br>
+        </div>
+    </div>
+
+    <div class="inferior-rodape">
+        <div class="copy">
+            <p>Braz e Leite Sociedade de Advogados © 2022. Todos os direitos reservados.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="js/index.js"></script>
+<script src="js/contato.js"></script>
+
+</body>
+</html>
